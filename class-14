@@ -1,0 +1,46 @@
+// Introduction to JavaScript
+console.log("Outputting a statement to the console");
+
+// Syntax and Variable Declaration
+var playerScore = 30;
+var outcome = "50"; // Changed to a string for demonstration
+const PI_VALUE = 3.14;
+
+console.log(playerScore);
+console.log(outcome);
+console.log(PI_VALUE);
+
+// Data Types
+// ...
+
+// Utilizing let for Block Scoping
+let currentScore = 30;
+let finalOutcome = "10";
+
+// BEDMAS Operations
+let totalScore = currentScore + parseInt(finalOutcome); // Ensure finalOutcome is treated as a number
+console.log(totalScore);
+
+let penaltyPoints = currentScore - parseInt(finalOutcome); // Ensure finalOutcome is treated as a number
+console.log(penaltyPoints);
+
+console.log(typeof penaltyPoints);
+
+let totalGamesPlayed = 5;
+let averageScore = totalScore / totalGamesPlayed;
+console.log(averageScore);
+console.log(typeof averageScore);
+
+let calculatedValue = ((totalScore ** 2) * 10 / (penaltyPoints + totalGamesPlayed))
+console.log(calculatedValue);
+
+// If totalGamesPlayed is 'five'
+let totalGamesAsString = 'five';
+let parsedTotalGamesPlayed = parseInt(totalGamesAsString); // Parse totalGamesPlayed to ensure it's treated as a number
+
+if (!isNaN(parsedTotalGamesPlayed)) {
+  // Check if the parsed value is a valid number
+  console.log(calculatedValue);
+} else {
+  console.log("Invalid totalGamesPlayed value. Please provide a valid number.");
+}

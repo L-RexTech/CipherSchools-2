@@ -1,0 +1,95 @@
+// String Operations
+console.log(typeof "Greetings");
+
+let term = 'cloudy'; // String.Prototype
+// console.log(term.toUpperCase()); // CLOUDY
+
+// Exercise caution to avoid using reserved keywords as variable names
+// let let = "hi"; // This is incorrect
+
+console.log("Hello and good evening".length);
+console.log("Hello".charAt(4));
+
+// Boolean (true-1, false-0)
+// True value --> any value
+// False value --> 0, false, '', NaN, undefined
+console.log(typeof true);
+console.log(typeof false);
+console.log(typeof isNaN('five'));
+
+/* if(1){
+    console.log("Very True ! ")
+} else{
+    console.log("Very Wrong ! ")
+} */
+
+if ("hello") {
+    console.log("very true");
+} else {
+    console.log("very wrong");
+}
+
+console.log("hello".includes('e'));
+
+// Null and Undefined
+let points1;
+let outcome1 = null;
+
+// console.log(typeof(points1));
+// console.log(typeof(outcome1));
+
+if (outcome1) {
+    console.log("very true");
+} else {
+    console.log("very wrong");
+}
+
+// OBJECT FILE
+
+let entity = { name: "Enigma" };
+// console.log(entity);
+
+let individual = {
+    name: "Alice",
+    email: "alice@wonderland.com",
+    age: 30,
+    status: true,
+    offspring: {
+        name: "Bob"
+    },
+    pastimes: ['Painting', 'Sculpting', true, 200, null]
+};
+
+let selectedName = 'name';
+
+// Accessing object properties
+// console.log(individual.status);  // true
+// console.log(['age']); //[ 'age' ]
+// console.log(individual['offspring']);  //{ name: 'Bob' }
+
+// Dynamic property access
+// console.log(individual[selectedName]); // Alice
+
+// Modifying the object
+console.log(individual);
+individual.region = "Europe";
+// console.log(individual);
+/* 
+{
+  name: 'Alice',
+  email: 'alice@wonderland.com',
+  age: 30,
+  status: true,
+  offspring: { name: 'Bob' },
+  pastimes: [ 'Painting', 'Sculpting', true, 200, null ],
+  region: 'Europe'
+} 
+*/
+
+console.log(typeof individual.pastimes); // Object
+console.log(typeof null); // Object
+
+/*  
+Primitive Data Types: Number, String, Boolean, Undefined
+Reference Data Types: Object
+*/

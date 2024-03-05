@@ -1,0 +1,11 @@
+let points1;
+let outcome1 = null;
+
+console.log(typeof points1);
+console.log(typeof outcome1);
+
+if (points1 !== undefined && points1 !== null) {
+    console.log("Points are defined and not null");
+} else {
+    console.log("Points are either undefined or null");
+}

@@ -1,0 +1,101 @@
+// Object Literal
+let individual = {
+  name: "John",
+  email: "john@wick.com",
+  age: 45,
+  count: 0,
+  status: true,
+  array: ["reading", "writing", 10, null, true],
+  login: function () {
+    console.log("login", this);
+    return this; // For method chaining, returning 'this'
+  },
+  logout: () => {
+    console.log("logout", this);
+    // Arrow functions use outer 'this' as they don't have their own 'this'
+  },
+  nameFunction() {
+    return this.name;
+  },
+  updateCount() {
+    this.count++;
+    return this; // For method chaining, returning 'this'
+  },
+  test() {
+    console.log("Testing method");
+    return this; // For method chaining, returning 'this'
+  },
+};
+
+// Calling methods and testing method chaining
+individual.test().login().updateCount().logout();
+console.log("outside", this); // In a browser environment, 'this' refers to the global object
+
+// ES6 Class keyword
+class PersonClass {
+constructor(name = 'Jon Doe', email = 'john@doe.com', count = 0) {
+  this.name = name;
+  this.email = email;
+  this.count = count;
+}
+
+login() {
+  console.log(this.name, 'has logged in!');
+  return this; // For method chaining, returning 'this'
+}
+
+logout() {
+  console.log(this.name, 'has logged out!');
+  return this; // For method chaining, returning 'this'
+}
+}
+
+// Creating instances of the PersonClass class
+let person1Class = new PersonClass('John', 'john@wick.com');
+let person2Class = new PersonClass('Jay', 'jay@z.com');
+let person3Class = new PersonClass('Jake', 'jake@tyler.com', 20);
+
+// Calling methods and testing method chaining with class instances
+person1Class.login().logout();
+person2Class.login().logout();
+console.log(typeof person3Class);
+
+// Number, String, Object instances
+let rollNumber = new Number(10);
+console.log(typeof rollNumber, typeof 10);
+
+let nameString = new String('Nithin');
+console.log(nameString.toUpperCase());
+
+let objectInstance = new Object({ name: 'Manas' });
+console.log(objectInstance);
+
+// Objects and methods
+let personOneObject = {
+name: 'John',
+email: 'john@wick.com',
+count: 0,
+age: 45,
+status: true, 
+children: {
+    name: 'Jay'
+},  
+hobbies: ['Reading', 'Writing', true, 100, null], // Array
+login() {
+    console.log(this.name, 'has logged in');
+    return this; // For method chaining, returning 'this'
+},
+logout() {
+    console.log('Logout', this.login());
+    return this; // For method chaining, returning 'this'
+},
+updateLogin() {
+    this.count++;
+    console.log(this.count);
+    return this; // For method chaining, returning 'this'
+},
+};
+
+// Testing method chaining with object methods
+personOneObject.login().updateLogin().updateLogin().logout();
+console.log(personOneObject.count);

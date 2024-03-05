@@ -1,0 +1,59 @@
+/* CSS Box Model for Class-12 */
+
+/* Key Box Model Attributes */
+/* Margin: Establishes space around the element */
+/* Border: Specifies the border surrounding the element */
+/* Padding: Creates space between the element's content and its border */
+/* Width/Height: Prescribes the dimensions of the element */
+
+/* Sample styling for a div (block element) */
+div {
+  margin: 10px; /* Margin on all sides */
+  border: 2px dashed black; /* Dashed black border */
+  padding: 5px; /* Padding on all sides */
+  width: 200px; /* Width of the element */
+  height: 200px; /* Height of the element */
+}
+
+/* Overflow Property */
+/* Determines the response when the content exceeds the box */
+/* Options: scroll (adds a scrollbar), hidden (conceals overflow) */
+div.overflowExample {
+  overflow: scroll;
+  /* Adjust as necessary */
+}
+
+/* Display Property */
+/* Dictates the box type used for an HTML element */
+/* Values: inline, block, inline-block, etc. */
+/* Display property is not inherited by child elements */
+
+/* Display: inline-block */
+/* Merges features of inline and block elements */
+/* Permits other elements to align beside it, while retaining block-level styling */
+div.inlineBlockExample {
+  display: inline-block;
+  /* No requirement for width and height if display is inline */
+}
+
+/* Margin Property */
+/* Determines the space outside the border of an element */
+/* Format: margin: top right bottom left */
+
+/* Centralized Arrangement */
+/* Auto margin for horizontal centering */
+/* Vertical margin for vertical centering */
+.centerExample {
+  margin: 10px auto; /* 10px top/bottom, auto left/right */
+}
+
+/* Padding Property */
+/* Specifies the space between content and the border of an element */
+/* Format: padding: top right bottom left */
+/* Adjust values as needed */
+
+/* Display Property not inherited by child */
+/* Child elements necessitate their own display property */
+
+/* If display is inline, no need for width and height */
+/* Inline elements occupy only necessary width */
